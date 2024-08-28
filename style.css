@@ -1,0 +1,163 @@
+/* style.css */
+
+/* Estilos para o corpo do documento */
+body {
+    margin: 0;
+    font-family: "Chakra Petch", sans-serif;
+    overflow-x: hidden; /* Remove a rolagem horizontal se houver */
+    color: #fff; /* Cor do texto geral */
+    background-color: #000; /* Cor de fundo para o corpo do documento */
+}
+
+/* Estilos para o iframe de fundo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    background: #000; /* Cor de fundo para o caso de o vídeo não carregar */
+}
+
+/* Faz o vídeo cobrir a tela */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Impede interação com o iframe */
+    object-fit: cover; /* Faz o vídeo cobrir toda a área sem distorcer */
+}
+
+/* Estilo para o link sobre o vídeo */
+.video-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Garante que o link esteja acima do vídeo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove a decoração do link */
+}
+
+/* Estilo para a sobreposição clicável */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparente para o vídeo ser visível */
+    cursor: pointer; /* Muda o cursor para indicar que o elemento é clicável */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    color: rgb(255, 255, 255);
+    border-bottom: solid 5px black;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 2em;
+    z-index: 2; /* Garante que o cabeçalho esteja sobre o fundo */
+    position: relative; /* Necessário para o z-index funcionar */
+}
+
+/* Estilos para as seções */
+section {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; /* Cor do texto para contraste com o vídeo de fundo */
+    background-color: rgba(0, 0, 0, 0.5); /* Adiciona uma sobreposição escura para melhorar a legibilidade */
+    margin: 0 auto;
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+}
+
+/* Estilos para a chamada de texto */
+.chamada-texto {
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    color: #fff; /* Cor do texto para contraste com o vídeo de fundo */
+}
+
+/* Estilos para o vídeo em destaque */
+.featured-video {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.featured-video p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+/* Estilos para a galeria de vídeos */
+.video-gallery {
+    margin: 2em 0;
+}
+
+.video-gallery h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+/* Estilos para a grade da galeria */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.gallery-item {
+    display: block;
+    max-width: 300px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para as imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-grid img {
+    opacity: 0.5;
+}
+.gallery-grid img:hover {
+    opacity: 1.0;
+    height: 101%;
+}
+
+/* Estilos para a seção de música do Spotify */
+.spotify-music {
+    padding: 20px;
+    text-align: center;
+}
+
+.spotify-music h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.spotify-music iframe {
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
